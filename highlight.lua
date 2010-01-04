@@ -193,7 +193,7 @@ weechat.hook_command("highlight",
 	"  add: adds a new phrase\n"..
 	"  del: removes a phrase\n\n"..
 	"If no command is given, all phrases are listed.",
-	"add || del || list", -- completion
+	"add|del|list", -- completion
 	"highlight_init", 
 	"")
 
