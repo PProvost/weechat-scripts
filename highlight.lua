@@ -179,8 +179,6 @@ function highlight_init(data, buffer, args)
 		AddPhrase(params)
 	elseif cmd == "del" then
 		DelPhrase(params)
-	elseif cmd == "help" then
-		PrintUsage()
 	else
 		PrintUsage()
 	end
@@ -191,4 +189,14 @@ end
 -- Register with weechat
 --
 weechat.register("Highlight", "PProvost", "0.1", "Apache-2.0", "A set of useful highlight management slash commands", "", "")
-weechat.hook_command("highlight", "Access the weechat hightlist list", "", "", "", "highlight_init", "")
+weechat.hook_command("highlight", 
+	"Access the weechat hightlist list",  -- description
+	"[list | add <phrase> | del <phrase>]", -- args
+	"  list: lists highlight phrases\n"..
+	"  add: adds a new phrase\n"..
+	"  del: removes a phrase\n\n"..
+	"If no command is given, all phrases are listed.",
+	"add || del || list", -- completion
+	"highlight_init", 
+	"")
+
