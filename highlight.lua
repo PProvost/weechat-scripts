@@ -168,7 +168,7 @@ function highlight_init(data, buffer, args)
 	local cmd, params = string.match(args, "(%a+) (.*)")
 	if not cmd or cmd == "" or cmd == "list" then
 		PrintList()
-		return
+		return weechat.WEECHAT_RC_OK
 	end
 
 	cmd = string.lower(cmd)
