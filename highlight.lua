@@ -13,9 +13,6 @@ Usage:
   /highlight [list]
 	  Prints the current highlight list to the core buffer
 
-	/highlight help
-	  Prints a simple usage message
-
 	/highlight add <phrase>
 	  Adds the <phrase> to the highlights list. Note that weechat is not
 		case sensitive in its highlight matching, so the phrase will be converted
