@@ -25,8 +25,14 @@ Usage:
 	  Removes the <phrase> from the highlights list. See the add command
 		for details around case sensitivity.
 
+Issues:
+	Please report issues using the issue tracker on my weechat-scripts
+	github repository:
+
+	http://github.com/PProvost/weechat-scripts/issues
+
 License:
-	Copyright 2009 Peter Provost (PProvost@freenode)
+	Copyright 2010 Peter Provost (irc:PProvost@freenode)
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
