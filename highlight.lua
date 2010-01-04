@@ -118,12 +118,6 @@ local function PrintList()
 	end
 end
 
-local function PrintUsage()
-	weechat.print("Highlight usage:")
-	weechat.print(" /highlight [list][add <phrase>][del <phrase>]")
-	weechat.print(" where <phrase> is the case-insensitive phrase you want to add to the highlight list.")
-end
-
 local function AddPhrase(phrase)
 	if not phrase or phrase == "" then
 		weechat.print("ERROR - you must provide a phrase to be added.")
@@ -178,7 +172,6 @@ function highlight_init(data, buffer, args)
 		DelPhrase(params)
 	else
 		weechat.command("", "/help highlight")
-		-- PrintUsage()
 	end
 	return weechat.WEECHAT_RC_OK
 end
