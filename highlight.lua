@@ -10,7 +10,7 @@ Installation:
 	Reload the lua plugin by typing '/lua reload'
 
 Usage:
-  /highlight [list]
+	/highlight [list]
 	  Prints the current highlight list to the core buffer
 
 	/highlight add <phrase>
