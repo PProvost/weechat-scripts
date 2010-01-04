@@ -165,7 +165,7 @@ end
 -- Main entry point
 --
 function highlight_init(data, buffer, args)
-	local cmd, params = string.match(args, "(%a+) (.*)")
+	local cmd, params = string.match(args, "(%a+)%s*(.*)")
 	if not cmd or cmd == "" or cmd == "list" then
 		PrintList()
 		return weechat.WEECHAT_RC_OK
@@ -177,7 +177,8 @@ function highlight_init(data, buffer, args)
 	elseif cmd == "del" then
 		DelPhrase(params)
 	else
-		PrintUsage()
+		weechat.command("", "/help highlight")
+		-- PrintUsage()
 	end
 	return weechat.WEECHAT_RC_OK
 end
